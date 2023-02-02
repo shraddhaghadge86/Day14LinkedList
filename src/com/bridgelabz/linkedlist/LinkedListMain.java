@@ -23,7 +23,7 @@ public class LinkedListMain {
                     System.out.println("Node is not present");
             }
 
-            LinkedList<Integer> linkedList3=new LinkedList<>();
+            LinkedList<Integer> linkedList3 = new LinkedList<>();
             System.out.println("\n******** : Insert a node in between : *********");
             linkedList3.append(56);
             linkedList3.append(70);
@@ -31,7 +31,19 @@ public class LinkedListMain {
             linkedList3.show();
             System.out.println("******** : Display linked list insert a node in between : *******");
             linkedList3.searchAndAdd(56,30);
-            linkedList3.show(); 
+            linkedList3.show();
+
+            LinkedList<Integer> linkedList4 = new LinkedList<>();
+            System.out.println("\n********* : Delete a Node from head using pop method : **********");
+            linkedList4.push(70);
+            linkedList4.push(30);
+            linkedList4.push(56);
+            System.out.println("********** : Display linked list without delete : *********");
+            linkedList4.show();
+            System.out.println("********** : Display linked list after delete the element : *********");
+            linkedList4.deleteFirstNode();
+            linkedList4.show();
+
 
 
     }

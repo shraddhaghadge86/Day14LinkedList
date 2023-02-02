@@ -61,6 +61,13 @@ public class LinkedList<T> {
             newNode.next = temp;//40=?70
         }
     }
+    public void deleteFirstNode(){
+        if (head == null) {
+            System.out.println("linkList is null");
+        } else {
+            head=head.next;
+        }
+    }
     
 }
 
