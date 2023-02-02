@@ -16,5 +16,13 @@ public class LinkedListMain {
             linkedList2.append(30);
             linkedList2.append(70);
             linkedList2.show();
-        }
+
+            if(linkedList2.searchNode(30) != null){
+                    System.out.println("Node is present");
+            }else {
+                    System.out.println("Node is not present");
+            }
+
+
+    }
 }
