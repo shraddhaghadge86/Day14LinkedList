@@ -44,7 +44,16 @@ public class LinkedListMain {
             linkedList4.deleteFirstNode();
             linkedList4.show();
 
-
-
+            LinkedList<Integer> linkedList5 = new LinkedList<>();
+            System.out.println("\n********* : Delete a Node from tail using popLast method : **********");
+            linkedList5.push(70); // Tail Node Delete
+            linkedList5.push(30);
+            linkedList5.push(56);
+            System.out.println("********** : Display linked list without delete : *********");
+            linkedList5.show();  // Display Node Elements
+            System.out.println("********** : Display linked list after delete the element : *********");
+            linkedList5.deleteLastNode();
+            linkedList5.show(); // Display Node Elements
     }
+    
 }
