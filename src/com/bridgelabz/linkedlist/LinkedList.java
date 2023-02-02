@@ -51,6 +51,16 @@ public class LinkedList<T> {
         }
         return null;
     }
+
+    public void searchAndAdd(T searchKey, T addKey) {
+        Node<T> searchNode = searchNode(searchKey);//30
+        Node<T> temp = searchNode.next;
+        Node<T> newNode = new Node<>(addKey);//40
+        if (searchNode != null) {
+            searchNode.next = newNode;//30=>40
+            newNode.next = temp;//40=?70
+        }
+    }
     
 }
 
