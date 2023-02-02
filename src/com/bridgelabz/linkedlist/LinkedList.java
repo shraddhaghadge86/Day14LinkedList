@@ -82,6 +82,21 @@ public class LinkedList<T> {
             firstNode.next = null;
         }
     }
+
+    public void searchAndDelete(T key) {//70=30=40=56
+        Node<T> deleteNode = searchNode(key);//40node
+        Node<T> temp = head;//30Node
+        while (temp != null) {
+            if (temp == deleteNode) {
+                head = deleteNode.next;
+                break;
+            } else if (temp.next == deleteNode) {//40=40
+                temp.next = deleteNode.next;//56
+                deleteNode.next = null;//
+            }
+            temp = temp.next;
+        }
+    }
     
 }
 
