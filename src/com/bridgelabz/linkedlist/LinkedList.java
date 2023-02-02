@@ -20,7 +20,7 @@ public class LinkedList<T> {
         Node<T> temp = head;
         while (temp != null){
             System.out.print(temp.key);
-            temp = temp.next;
+            temp=temp.next;
             if(temp != null){
                 System.out.print(" => ");
             }
@@ -29,7 +29,7 @@ public class LinkedList<T> {
     }
 
     public void append(T key) {
-        Node<T> newNode=new Node<>(key);
+        Node<T> newNode = new Node<>(key);
         if (head == null){
             head = newNode;
             tail = newNode;
@@ -39,5 +39,18 @@ public class LinkedList<T> {
             tail = newNode;
         }
     }
+
+    public Node<T> searchNode(T key){
+        Node<T> temp = head;
+        while (temp != null){
+            if (temp.key == key){
+                return temp;
+            }else {
+                temp = temp.next;
+            }
+        }
+        return null;
+    }
     
 }
+
