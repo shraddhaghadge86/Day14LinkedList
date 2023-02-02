@@ -21,11 +21,23 @@ public class LinkedList<T> {
         while (temp != null){
             System.out.print(temp.key);
             temp = temp.next;
-            if(temp != null) {
-                System.out.print("=>");
+            if(temp != null){
+                System.out.print(" => ");
             }
         }
         System.out.println();
+    }
+
+    public void append(T key) {
+        Node<T> newNode=new Node<>(key);
+        if (head == null){
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            tail.next = newNode;
+            tail = newNode;
+        }
     }
     
 }
